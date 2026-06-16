@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>George & Andreea — 05 Septembrie 2026</title>
+  <meta name="description" content="Invitație online la nunta George & Andreea, 05 Septembrie 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="leaf leaf-tl">☘</div><div class="leaf leaf-tr">☘</div><div class="leaf leaf-bl">☘</div><div class="leaf leaf-br">☘</div>
+  <nav class="nav">
+    <button data-page="home" class="active">Invitație</button>
+    <button data-page="rsvp">Confirmare</button>
+    <button data-page="locations">Locații</button>
+  </nav>
+
+  <main>
+    <section id="home" class="page active card invitation">
+      <p class="pretitle">În fața lui Dumnezeu, facem o frumoasă<br>promisiune – noi,</p>
+      <h1>GEORGE & ANDREEA</h1>
+      <p class="subtitle">cu binecuvântarea părinților:</p>
+      <div class="two-cols names">
+        <p>Ilaș Gheorghe & Alina</p>
+        <p>Laza Nicolae & Violeta</p>
+      </div>
+      <p class="subtitle small">și însoțiți la acest început de drum de nașii noștri:</p>
+      <div class="two-cols names">
+        <p>Laza Andrei & Daiana</p>
+        <p>Ghenț Raul & Adela</p>
+      </div>
+      <p class="promise">am decis să ne unim prin căsătorie și ne angajăm să<br>construim împreună o familie.</p>
+      <p class="invite">Vă invităm cu drag să ne fiți alături!</p>
+
+      <div class="event-row">
+        <div class="event-box"><div class="icon">⛪</div><p>Sf. Petru & Pavel<br><span>-Totoreni-</span><br>ora: 17:30</p></div>
+        <div class="date-box"><span>05</span><strong>SEPTEMBRIE</strong><span>2026</span></div>
+        <div class="event-box"><div class="icon">🍽</div><p>Terra Events<br><span>-Drăgănești-</span><br>ora: 19:30</p></div>
+      </div>
+
+      <div id="countdown" class="countdown" aria-label="Numărătoare inversă până la nuntă"></div>
+      <p class="confirm-text">Vă rugăm să ne confirmați prezența până în data de<br><strong>15 AUGUST 2026</strong></p>
+      <div class="phone-row"><p>0762093620<br><span>-Andreea-</span></p><p>0770760347<br><span>-George-</span></p></div>
+      <button class="primary" data-page="rsvp">Confirmă prezența</button>
+    </section>
+
+    <section id="rsvp" class="page card">
+      <h2>Confirmare prezență</h2>
+      <p class="lead">Ne ajută mult să știm câte persoane vor fi alături de noi.</p>
+      <form id="rsvpForm">
+        <label>Nume și prenume<input name="nume" required placeholder="Ex: Popescu Maria" /></label>
+        <label>Confirm participarea<select name="participare" required><option value="Da">Da, particip</option><option value="Nu">Nu pot participa</option></select></label>
+        <div class="form-grid">
+          <label>Număr adulți<input name="adulti" type="number" min="0" value="1" required /></label>
+          <label>Număr copii<input name="copii" type="number" min="0" value="0" required /></label>
+        </div>
+        <label>Numele persoanelor participante<textarea name="persoane" rows="4" placeholder="Scrie numele invitaților care vin împreună cu tine"></textarea></label>
+        <label>Mesaj pentru miri<textarea name="mesaj" rows="3" placeholder="Opțional"></textarea></label>
+        <button class="primary" type="submit">Trimite confirmarea</button>
+        <p id="formStatus" class="status"></p>
+      </form>
+    </section>
+
+    <section id="locations" class="page card">
+      <h2>Locații</h2>
+      <div class="location-card">
+        <h3>Casa Mirelui</h3>
+        <p>Sat Măgura, Comuna Pietroasa, Județul Bihor, Nr. 91</p>
+        <a class="map-link" href="https://www.google.com/maps/place/M%C4%83gura/@46.5550807,22.5515476,3a,75y,344.23h,56.68t/data=!3m8!1e1!3m6!1sO5BFPCgzU5zJzf_P0eiStA!2e0!5s20240401T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D33.31817289653334%26panoid%3DO5BFPCgzU5zJzf_P0eiStA%26yaw%3D344.22984451514543!7i16384!8i8192!4m6!3m5!1s0x4748c9c2361e8e87:0x51e90e427c37b2bf!8m2!3d46.5544689!4d22.5519474!16s%2Fg%2F121nxhmw?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Navighează cu Google Maps</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1781640446494!6m8!1m7!1sO5BFPCgzU5zJzf_P0eiStA!2m2!1d46.5550807425987!2d22.55154756636768!3f344.22984451514543!4f-33.31817289653334!5f0.7820865974627469" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="location-card">
+        <h3>Casa Miresei</h3>
+        <p>Totoreni, Județul Bihor</p>
+        <a class="map-link" href="https://www.google.com/maps/place/Totoreni/@46.615377,22.3805237,16z/data=!3m1!4b1!4m6!3m5!1s0x4748b050129a6ac5:0x81fc5434208b0ad1!8m2!3d46.6152029!4d22.3866558!16s%2Fg%2F120vt77_?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Navighează cu Google Maps</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1781640397886!6m8!1m7!1soBraiVjLYIobtEq6Y4MmfQ!2m2!1d46.61303314041233!2d22.38532045149454!3f171.71954153648824!4f-21.46704866341507!5f0.7820865974627469" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

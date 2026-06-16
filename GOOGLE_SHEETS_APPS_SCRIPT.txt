@@ -1,0 +1,26 @@
+1. Creează un Google Sheet nou.
+2. Extensions / Extensii → Apps Script.
+3. Șterge codul existent și lipește codul de mai jos.
+4. Deploy → New deployment → Web app.
+5. Execute as: Me. Who has access: Anyone.
+6. Copiază URL-ul și lipește-l în script.js în loc de PASTEAZA_AICI_LINKUL_WEB_APP_DIN_GOOGLE_APPS_SCRIPT.
+
+Cod Apps Script:
+
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const data = JSON.parse(e.postData.contents);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(['Data trimiterii', 'Nume', 'Participare', 'Adulți', 'Copii', 'Persoane', 'Mesaj']);
+  }
+  sheet.appendRow([
+    data.data_trimiterii || new Date(),
+    data.nume || '',
+    data.participare || '',
+    data.adulti || '',
+    data.copii || '',
+    data.persoane || '',
+    data.mesaj || ''
+  ]);
+  return ContentService.createTextOutput(JSON.stringify({ result: 'success' })).setMimeType(ContentService.MimeType.JSON);
+}
